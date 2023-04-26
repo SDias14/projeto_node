@@ -1,0 +1,27 @@
+{
+  "name": "projeto_node",
+  "version": "1.0.0",
+  "description": "Node project with postgres, authentication , etc",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sucrase-node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDias14/projeto_node.git"
+  },
+  "author": "samuel dias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SDias14/projeto_node/issues"
+  },
+  "homepage": "https://github.com/SDias14/projeto_node#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "sucrase": "^3.32.0"
+  }
+}
