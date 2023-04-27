@@ -1,7 +1,6 @@
-
-import express from "express"; // importando o express
-import routes from "./routes"; // importando o arquivo routes.js
-
+/* eslint-disable linebreak-style */
+import express from 'express'; // importando o express
+import routes from './routes'; // importando o arquivo routes.js
 
 class App {
   constructor() {
@@ -19,6 +18,5 @@ class App {
     this.server.use(routes); // usando o metodo routes
   }
 }
-
 
 export default new App().server; // exportando o arquivo app.js

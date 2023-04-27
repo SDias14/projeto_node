@@ -1,0 +1,29 @@
+usando algumas ferramentas para padronização de codigo. 
+
+1° passo - instalar o eslint
+
+2° passo - iniciar o eslint
+
+3° passo -  escolher a opcao : To check syntax, find problems, and enforce code style
+
+4° passo - escolher a opcao : JavaScript modules (import/export)
+
+5° passo - escolher a opcao : none
+
+6° passo - usa typescript? (y/N) : N
+
+7° passo - escolher a opcao : Node
+
+8° passo - escolher a opcao : Use a popular style guide : Airbnb
+
+9° passo - escolher a opcao : JavaScript
+
+10° passo - would you like to install them now with npm? (Y/n) : Y
+
+11 ° passo - instalar via npm
+
+12° passo - instalar a extensao do eslint no vscode 
+
+13° passo - ir no settings do vscode
+
+14° passo - procurar por : eslint: validate. 
