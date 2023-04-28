@@ -3,9 +3,9 @@
 /* eslint-disable no-shadow */
 /* eslint-disable linebreak-style */
 const customers = [
-  { id: 1, name: 'DevSamurai', site: 'https://devsamurai.com.br' },
-  { id: 2, name: 'Google', site: 'https://google.com.br' },
-  { id: 3, name: 'Udemy', site: 'https://udemy.com.br' },
+  { id: 1, name: "DevSamurai", site: "https://devsamurai.com.br" },
+  { id: 2, name: "Google", site: "https://google.com.br" },
+  { id: 3, name: "Udemy", site: "https://udemy.com.br" },
 ];
 
 class CustomersController {
@@ -40,7 +40,7 @@ class CustomersController {
     const { name, site } = req.body;
     const customer = customers.find((customer) => customer.id == id);
     if (!customer) {
-      return res.status(404).json({ error: 'Customer not found' });
+      return res.status(404).json({ error: "Customer not found" });
     }
     customer.name = name;
     customer.site = site;
@@ -53,10 +53,10 @@ class CustomersController {
     const { id } = req.params;
     const customerIndex = customers.findIndex((customer) => customer.id == id);
     if (customerIndex < 0) {
-      return res.status(404).json({ error: 'Customer not found' });
+      return res.status(404).json({ error: "Customer not found" });
     }
     customers.splice(customerIndex, 1);
-    return res.send('customer deleted');
+    return res.send("customer deleted");
   }
 }
 

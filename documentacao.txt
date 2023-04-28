@@ -1,4 +1,4 @@
-usando algumas ferramentas para padronização de codigo. 
+usando algumas ferramentas para padronização de codigo.
 
 1° passo - instalar o eslint
 
@@ -22,8 +22,94 @@ usando algumas ferramentas para padronização de codigo.
 
 11 ° passo - instalar via npm
 
-12° passo - instalar a extensao do eslint no vscode 
+12° passo - instalar a extensao do eslint no vscode
 
 13° passo - ir no settings do vscode
 
-14° passo - procurar por : eslint: validate. 
+14° passo - procurar por : eslint: validate.
+
+15° - npm i prettier eslint-config-prettier eslint-plugin-prettier -D : instalar o prettier
+
+16° - voltar no eslintrc para fazer ajustes
+
+17° - extensaões do vscode : prettier e eslint
+
+18° - criar o arquivo prettier.config.js
+
+19° - fazer o fixing para padronizar o codigo : npx eslint --fix src --ext .js
+
+20° - criar o arquivo .editorconfig
+
+============================================================
+
+Segunda parte - orm.
+
+
+orm - object relational mapping
+
+abstração de banco de dados que faz com que as tabelas do banco de dados sejam representadas em classes no codigo.
+
+migrations = historico do banco de dados, controle de versao do banco de dados (criar tabelas, deletar, alterar, etc)
+
+1° passo - configurar dentro da pasta src a pasta config.
+
+2° passo - criar a pasta database dentro da pasta src.
+
+3° passo - criar  a pasta migrations dentro da pasta database.
+
+4° passo - instalar sequelize via npm.
+
+5° passo - instalar o sequelize-cli via npm.
+
+6° passo - criar o arquivo .sequelizerc na raiz do projeto.
+
+7° - configurar este arquivo para que ele encontre os caminhos corretos.
+
+8° - primeiro temos que configurar o caminho para o arquivo de configuração do banco de dados.
+
+9° - segundo temos que configurar o caminho para a pasta de migrations.
+
+10° - terceiro temos que configurar o caminho para a pasta de models.
+
+11° - 'seeders-path': resolve(__dirname, 'src', 'database', 'seeds') - seed
+é um arquivo que vai popular a base de dados com dados iniciais.
+
+12° - instalar o pg via npm e o pg-hstore via npm.
+
+13° - criar o arquivo de configuração do banco de dados.
+
+14° - configurar o banco de dados com as credenciais do banco de dados.
+
+15° - criando a migration de usuarios criando o model.
+
+16° - criar o banco para depois criar a migration. regra : tabela no plural e model no singular.
+
+17° - criar a migration de customers. Ele vai ter : id, name, email, status, created_at, updated_at.
+
+18° - rodar a migration de customers.
+
+19° desfazer a migration de customers.  sequelize db:migrate:undo:all
+
+20° - rodar a migration de customers.
+
+21° - criar o model para customers. ele vai fazer a ponte entre o banco de dados e o codigo.
+
+22° - importar o sequelize para esse arquivo.
+
+23° - criando a migration contact
+
+24° - colocar a chave estrangeira como ultimo campo.
+
+25° - criar o model para contacts.
+
+26° - criar a migration para users
+
+27° - criar o model para users.
+
+28° - carregar os models na aplicação.
+
+29° - ir na pasta database e criar um arquivo index.js
+
+30° - essa class vai ser responsavel por criar a configuração para carregar cada init dos models.
+
+31° - importar essa classe dentro do app.

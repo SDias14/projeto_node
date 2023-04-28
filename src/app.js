@@ -1,6 +1,8 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable linebreak-style */
-import express from 'express'; // importando o express
-import routes from './routes'; // importando o arquivo routes.js
+import express from "express";
+import routes from "./routes";
+import "./database";
 
 class App {
   constructor() {

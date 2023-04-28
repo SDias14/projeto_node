@@ -1,5 +1,5 @@
 import { Router } from "express"; // importando o express
-//importando os controllers
+// importando os controllers
 
 import customers from "./mvc/controller/CustomersController";
 // rotas de customers
@@ -17,7 +17,5 @@ routes.put("/customers/:id", customers.update); // rota para atualizar um regist
 routes.delete("/customers/:id", customers.delete); // rota para deletar um registro
 
 // fim das rotas de customers
-
-
 
 export default routes; // exportando o arquivo routes.js
