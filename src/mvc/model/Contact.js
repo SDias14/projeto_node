@@ -8,16 +8,12 @@ class Contact extends Model {
             {
                 name: sequelize.STRING,
                 email: sequelize.STRING,
-                status: sequelize.ENUM("ACTIVE", "ARCHIVED"),
+                // status: sequelize.ENUM("ACTIVE", "ARCHIVED"),
             },
             {
                 sequelize,
             }
         );
-    }
-
-    static associate(model) {
-        this.belongsTo(model.Customer, { foreignKey: "customer_id" });
     }
 }
 
