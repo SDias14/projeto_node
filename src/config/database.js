@@ -4,7 +4,7 @@ module.exports = {
     port: 3307,
     username: "postgres",
     password: "3426",
-    database: "teste-dominando-node-js",
+    database: "teste",
     define: {
         timestamps: true,
         underscored: true,

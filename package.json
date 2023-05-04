@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "sucrase-node ./src/server.js"
+    "start": "sucrase-node ./src/server.js",
+    "playground": "sucrase-node ./src/playground.js"
   },
   "repository": {
     "type": "git",

@@ -113,3 +113,16 @@ migrations = historico do banco de dados, controle de versao do banco de dados (
 30° - essa class vai ser responsavel por criar a configuração para carregar cada init dos models.
 
 31° - importar essa classe dentro do app.
+
+
+===========================================
+
+3 formas de find no sequelize
+
+1° - find all - traz todos os registros
+
+2° - find one - traz o primeiro registro que encontrar
+
+3° - find by pk - traz o registro pelo id, ou seja, pela chave primaria.
+
+4° - Op - operadores do sequelize.
