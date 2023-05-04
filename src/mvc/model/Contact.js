@@ -2,12 +2,13 @@
 // eslint-disable-next-line no-unused-vars
 import { Sequelize, DataTypes, Model } from "sequelize";
 import database from "../../config/database";
+import Customer from "./Customer";
 
 const sequelize = new Sequelize(database);
 
 class Contact extends Model {
-    static associate(models) {
-        this.belongsTo(models.Customer, { foreignKey: "customer_id" });
+    static associate() {
+        Contact.belongsTo(Customer, { foreignKey: "customer_id" });
     }
 }
 

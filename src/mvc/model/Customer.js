@@ -1,11 +1,14 @@
+/* eslint-disable import/no-cycle */
 import { Sequelize, DataTypes, Model } from "sequelize";
 import database from "../../config/database";
+// eslint-disable-next-line no-unused-vars
+import Contact from "./Contact";
 
 const sequelize = new Sequelize(database);
 
 class Customer extends Model {
-    static associate(models) {
-        this.hasMany(models.Contact);
+    static associate() {
+        Customer.hasMany(Contact, { foreignKey: "customer_id" });
     }
 }
 
@@ -44,6 +47,13 @@ Customer.init(
         // Other model options go here
         sequelize, // We need to pass the connection instance
         modelName: "Customer", // We need to choose the model name
+        scopes: {
+            active: {
+                where: {
+                    status: "ACTIVE",
+                },
+            },
+        },
     }
 );
 
