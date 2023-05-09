@@ -36,23 +36,20 @@ Customer.init(
         },
         created_at: {
             type: DataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
         },
         updated_at: {
             type: DataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
         },
     },
     {
         // Other model options go here
         sequelize, // We need to pass the connection instance
         modelName: "Customer", // We need to choose the model name
-        scopes: {
-            active: {
-                where: {
-                    status: "ACTIVE",
-                },
-            },
+        name: {
+            singular: "customer",
+            plural: "customers",
         },
     }
 );

@@ -126,3 +126,18 @@ migrations = historico do banco de dados, controle de versao do banco de dados (
 3° - find by pk - traz o registro pelo id, ou seja, pela chave primaria.
 
 4° - Op - operadores do sequelize.
+
+
+arquitetura mvc
+
+arquitetura de software é sobre organização.
+
+controllers - responsavel por receber as requisições e enviar as respostas.(regras de negocio)
+
+neste curso podemos identificar essa arquitetura como :
+
+controller - classes controller(express)
+
+model - classes model(sequelize)
+
+view - json (res.json)

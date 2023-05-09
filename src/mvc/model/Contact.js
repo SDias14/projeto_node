@@ -46,16 +46,20 @@ Contact.init(
 
         created_at: {
             type: DataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
         },
         updated_at: {
             type: DataTypes.DATE,
-            allowNull: false,
+            allowNull: true,
         },
     },
     {
         sequelize,
         modelName: "Contact", // We need to choose the model name
+        name: {
+            singular: "contact",
+            plural: "contacts",
+        },
     }
 );
 
