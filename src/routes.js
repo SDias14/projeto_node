@@ -5,10 +5,19 @@ import { Router } from "express"; // importando o express
 import customers from "./mvc/controller/CustomersController";
 import contacts from "./mvc/controller/ContactsController";
 import users from "./mvc/controller/UsersController";
-
-// rotas de customers
+import auth from "./middlewares/auth";
+import sessions from "./mvc/controller/SessionsController";
 
 const routes = new Router(); // criando uma nova rota
+
+// rotas de sessions
+
+routes.post("/sessions", sessions.create); // rota para criar um registro
+
+// to this point all routes will be protected by the auth middleware
+
+routes.use(auth); // usando o middleware auth
+// rotas de customers
 
 routes.get("/customers", customers.index); // rota para listar um registro
 

@@ -141,3 +141,13 @@ controller - classes controller(express)
 model - classes model(sequelize)
 
 view - json (res.json)
+
+o express é feito de varios middlewares.
+
+o que são middlewares? são funcoes com acesso a requisições e respostas e proximo middleware.
+
+no express temos os middlewares globais e os middlewares locais.
+
+os globais atuam antes de todas as rotas.
+
+os locais atuam em rotas especificas.

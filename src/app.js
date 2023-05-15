@@ -1,6 +1,7 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable linebreak-style */
 import express from "express";
+// import authMiddleware from "./middlewares/auth";
 import routes from "./routes"; // importando o arquivo routes.js
 import "./database";
 
@@ -13,6 +14,7 @@ class App {
 
   middleware() {
     this.server.use(express.json());
+    // this.server.use(authMiddleware);
   }
 
   // usando as rotas
